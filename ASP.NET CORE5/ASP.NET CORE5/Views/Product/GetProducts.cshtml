@@ -1,0 +1,35 @@
+﻿#<!-- Tuple Kullanımı -->
+@* @model ASP.NET_CORE5.Models.ViewModels.UserProduct
+
+
+
+<h3>@Model.Product.ProductName</h3>
+<h3>@Model.User.UserName</h3> *@
+
+@*Yukarıda ki ilk kullanımdı aşağıdaki ise tuple kullanımı *@
+
+@* @model (ASP.NET_CORE5.Models.Product p, ASP.NET_CORE5.Models.User u)
+
+<h3>@Model.p.ProductName</h3>
+<h3>@Model.u.UserName</h3> *@  @*Tuple kullanımı böyledir.*@
+
+<!-- #endregion -->
+
+
+
+@* @Html.TextBox("txtAdi", null, new { style = "background-color: pink; color: white" }) *@ @*Basit htmlhelper kutucuğu style değeri.*@
+
+
+
+@*Tag Helper olusturma*@
+@* 
+@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper * , ASP.NET_CORE5
+
+<a href="mailto:ay5507568@gmail.com">Email</a>
+
+@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+
+<email>a = "abc"</email>
+
+<email>a = "abc" mail ="ay5507568@gmail.com" display = "Ahmet Yılmaz'ın Mail'i"</email> *@
